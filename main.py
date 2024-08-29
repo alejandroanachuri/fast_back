@@ -6,7 +6,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "¡Hola mundo!"}
+    return {"message": "¡Hola vagos!!!!"}
 
 @app.post('/upload')
 def upload(file:UploadFile):
