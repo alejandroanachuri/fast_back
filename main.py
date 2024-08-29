@@ -1,6 +1,8 @@
 from fastapi import FastAPI, File, UploadFile 
 import vercel_blob
+import dotenv
 
+dotenv.load_dotenv()
 
 app = FastAPI() 
 
