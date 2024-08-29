@@ -10,5 +10,6 @@ def read_root():
 
 @app.post('/upload')
 def upload(file: UploadFile = File(...)):
-    vercel_blob.put(file.filename, file.read(), {})
+    print("recibido")
+    vercel_blob.put(file.filename, file.file.read(), {})
     return {"message": "Archivo recibido"}
