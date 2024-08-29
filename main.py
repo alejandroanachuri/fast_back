@@ -8,10 +8,10 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "¡Hola vagos!!!!"}
+    return {"message": "¡Hola vagos 3!!!!"}
 
 @app.post('/upload')
 def upload(file: UploadFile = File(...)):
-    print("recibido")
+    print("recibido") 
     vercel_blob.put(file.filename, file.file.read(), {})
     return {"message": "Archivo recibido"}
